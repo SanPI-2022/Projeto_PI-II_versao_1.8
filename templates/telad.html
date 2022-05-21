@@ -1,0 +1,65 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+	<title>Tela 4</title>
+
+	<section id="novo">
+		<form action="/telad" method="post">
+
+			<h1>Poste de iluminação</h1>
+
+            <fieldset>
+				<div class="container">
+					<input type="text" maxlength="50" id="codigo" name="codigo" value="PI-II Poste=0001" readonly>
+					<label class="ficaemcima">Código</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="text" class="form-control" maxlength="50" id="nome" name="nome" autofocus required/>
+					<label>Insira seu Nome</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="text" class="form-control" maxlength="14" id="cpf" name="cpf" required/>
+					<label>Insira seu CPF</label>
+				</div>
+			</fieldset>
+
+            <fieldset>
+				<div class="container">
+					<input type="text" class="form-control" maxlength="50" id="telefone" name="telefone" required/>
+					<label>Insira seu Telefone</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<div class="container">
+					<input type="email" class="form-control" maxlength="50" id="email" name="email" required/>
+					<label>Insira seu E-mail</label>
+				</div>
+			</fieldset>
+
+            <fieldset>
+                <div class="container">
+                    <input type="text" class="form-control" maxlength="300" id="descricao" name="descricao" required/>
+					<label>Descreva o problema</label>
+                </div>
+			</fieldset>
+
+			<a><button type="submit" onclick="mudaTela4()">ENVIAR</button></a>
+			<a><button class="vermelho" type="button" onclick="mudaTelaC()">CANCELAR</button></a>
+
+			<p class="dev">Site criado para Projeto Integrador II - Univesp &copy
+				Polos: Bertioga/Queluz/São Bernardo do Campo</p>
+		</form>
+	</section>
+
+    {% endblock %}
